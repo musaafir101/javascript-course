@@ -1,0 +1,38 @@
+primitive data types
+
+number
+bool
+string
+
+are primitive data types
+what if we assign num1 to num2 
+these types save in memory in a stack formate like one by one. 
+these types has there own memory location in a stack separatly.
+
+if we change num1 then arr2 will not be changed
+
+Non - Primitive or Reference data types
+
+array
+object
+
+are the Non - Primitive or Reference data types
+what if we assign arr1 to arr2 
+arrays are store in "HEAP" and there address store in stack by pointers
+when we assign arr1 to arr2 so arr1 pointer points the array which created at the first time
+then arr2 array is assigned arr1 so arr2 pointer points the same array which was create at the first time
+
+if we change arr1 then automatically arr2 will be changed
+
+cloning arrays
+
+let arr1 = ["Item1","Item2"]
+let arr2 = arr1.slice(0) // this is faster then the rest // new array created in heap separatly
+let arr2 = [].concat(arr1) // new array created in heap separatly
+let arr2 = [ ...arr1 ] // new array created in heap separatly
+
+add new items in array
+
+let arr2 = arr1.slice(0).concat(["Item3","Item4"])
+let arr2 = [].concat(arr1,["Item3","Item4"])
+let arr2 = [ ...arr1,"Item3","Item4" ]
